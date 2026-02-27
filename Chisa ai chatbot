@@ -1,11 +1,11 @@
 {
   "name": "chisa-ai-chatbot",
+  .gitignore 
   "version": "1.0.0",
   "description": "Chisa AI Chatbot from Wuthering Waves with voice and emotions",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    .gitignore 
+    "start": "node server.js"
     "dev": "nodemon server.js"
   },
   "dependencies": {
