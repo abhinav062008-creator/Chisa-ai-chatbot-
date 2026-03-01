@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Chisa · Wuthering Waves</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="portrait-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <i class="fas fa-water"></i>
+                <span>Wuthering Waves · Chat</span>
+            </div>
+            <button class="reset-btn" id="resetBtn">
+                <i class="fas fa-redo-alt"></i>
+            </button>
+        </div>
+
+        <!-- Avatar Section - CHISA WILL APPEAR HERE -->
+        <div class="avatar-section">
+            <div class="avatar-wrapper">
+                <div class="avatar-glow" id="avatarGlow"></div>
+                <div class="avatar-frame">
+                    <!-- CHISA'S REAL IMAGE -->
+                    <img id="chisaImage" class="chisa-img" alt="Chisa">
+                </div>
+                <div class="emotion-badge" id="emotionTag">serene</div>
+            </div>
+            <div class="chisa-name">CHISA</div>
+            <div class="speaking-indicator" id="speakingIndicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="messages-area" id="messagesArea">
+            <!-- Welcome message -->
+            <div class="message received">
+                <div class="message-sender">Chisa</div>
+                <div class="message-bubble">
+                    The tide whispers your name... I've been waiting, tidetamer.
+                </div>
+            </div>
+        </div>
+
+        <!-- Typing Indicator -->
+        <div class="typing-indicator" id="typingIndicator">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span class="typing-text">Chisa is thinking...</span>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="Ask Chisa anything..."
+                    autocomplete="off"
+                >
+                <button class="send-btn" id="sendBtn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="input-hint">
+                <i class="fas fa-chevron-up"></i>
+                <span>Chisa has infinite knowledge</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
