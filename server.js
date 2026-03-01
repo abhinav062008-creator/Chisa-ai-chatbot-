@@ -12,7 +12,25 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));// Add this for debugging
+app.get('/debug', (req, res) => {
+    const fs = require('fs');
+    const publicPath = path.join(__dirname, 'public');
+    const assetsPath = path.join(publicPath, 'assets');
+    
+    const debug = {
+        publicFolderExists: fs.existsSync(publicPath),
+        publicFiles: fs.existsSync(publicPath) ? fs.readdirSync(publicPath) : [],
+        assetsFolderExists: fs.existsSync(assetsPath),
+        assetsFiles: fs.existsSync(assetsPath) ? fs.readdirSync(assetsPath) : [],
+        indexExists: fs.existsSync(path.join(publicPath, 'index.html')),
+        styleExists: fs.existsSync(path.join(publicPath, 'style.css')),
+        scriptExists: fs.existsSync(path.join(publicPath, 'script.js')),
+        avatarExists: fs.existsSync(path.join(assetsPath, 'avatar-states.js'))
+    };
+    
+    res.json(debug);
+});
 
 // Initialize DeepSeek AI
 const openai = new OpenAI({
