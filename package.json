@@ -1,0 +1,32 @@
+{
+  "name": "chisa-ai-chatbot",
+  "version": "2.0.0",
+  "description": "Chisa AI Chatbot from Wuthering Waves - with real image, factual answers, and anime voice",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "debug": "node server.js --inspect"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "openai": "^4.20.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "chisa",
+    "wuthering-waves",
+    "ai-chatbot",
+    "anime",
+    "voice"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
